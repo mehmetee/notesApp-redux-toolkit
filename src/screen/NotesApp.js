@@ -18,6 +18,7 @@ function NotesApp(){
     const [tickVisibles, setTickVisibles] = useState([false, false, false, false, false]);
     const colors = ['#f06292', '#ba68c8', '#ffd54f', '#4fc3f7', '#aed581'];
 
+
    
     const filteredNotes = noteList.filter((note) => {
         return note.text.toLowerCase().includes(searchText.toLowerCase());
@@ -54,23 +55,21 @@ function NotesApp(){
                 onChangeText={setText}
                 />
                 <View style={styles.globalButtonContainer}>
-                    <View style={styles.colorButtonContainer}>
-                        <ButtonColor  bgColor={colors[0]} onPress={()=>{
-                             setTickVisibles(prevState => prevState.map((_, index) => index === 0 ? true : false));
-                        }} isVisible={tickVisibles[0]} index={0}/>
-                        <ButtonColor  bgColor={colors[1]}onPress={()=>{
-                            setTickVisibles(prevState => prevState.map((_, index) => index === 1 ? true : false));
-                        }}  isVisible={tickVisibles[1]} index={1}/>
-                        <ButtonColor  bgColor={colors[2]} onPress={()=>{
-                           setTickVisibles(prevState => prevState.map((_, index) => index === 2 ? true : false));
-                        }} isVisible={tickVisibles[2]} index={2}/>
-                        <ButtonColor  bgColor={colors[3]} onPress={()=>{
-                           setTickVisibles(prevState => prevState.map((_, index) => index === 3 ? true : false));
-                        }}  isVisible={tickVisibles[3]} index={3} />
-                        <ButtonColor  bgColor={colors[4]} onPress={()=>{
-                         setTickVisibles(prevState => prevState.map((_, index) => index === 4 ? true : false));
-                        }} isVisible={tickVisibles[4]} index={4}/>
-                    </View>
+                <View style={styles.colorButtonContainer}>
+                  {colors.map((color, index) => (
+                    <ButtonColor
+                      key={index}
+                      bgColor={color}
+                      onPress={() =>  {
+                        setTickVisibles(prevState =>
+                          prevState.map((_, i) => i === index ? true : false)
+                        );
+                      }}
+                      isVisible={tickVisibles[index]}
+                      index={index}
+                    />
+                  ))}
+                </View>
                     
                     <View style={styles.buttonContainer}>
                         <Button 
