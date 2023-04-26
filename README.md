@@ -4,6 +4,9 @@ Bu uygulama çalışmamda  redux-toolkit yapısını daha iyi öğrenebilmek ad�
 Uygulama içerisinde kullanıcıdan notlar alınıyor aynı zamanda kayıt edilecek notun arka plan renginide seçmesi gerekiyor bunlar yapıldığı taktirde  aşşğıda notlar görüntülenecektir.
 Searc kısmında ise kayıtlı notları arayabilir,filtreleyebiliriz ve tüm bunları redux-toolkit aracılığı ile gerçekleştiriyourz.
 
+### Optimizasyonlar yapıldı
+buton renkleri kısmında gerekli optimizasyonlar yapıldı daha kullanış ve daha dinamik bir yapı oluşturuldu.
+
 ## NotesApp videos
 
 
