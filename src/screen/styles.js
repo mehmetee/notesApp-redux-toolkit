@@ -1,0 +1,80 @@
+const { StyleSheet } = require("react-native");
+
+export default StyleSheet.create({
+    container:{
+        flex:1,
+        backgroundColor:'#cbcaca',
+    },
+    headerContainer:{
+        marginTop:20,
+        marginBottom:20,
+        alignItems:'center',
+        justifyContent:'center',
+    },
+    headerTitle:{
+        color:'#808080',
+        fontSize:30,
+        fontWeight:'bold'
+    },
+    searchContainer:{
+        width:'80%',
+        height:50,
+        alignSelf:'center'
+
+    },
+    searchFilteredGlobalContainer:{
+        backgroundColor:'white',
+        height:'100%',
+        borderTopLeftRadius:40,
+        borderTopRightRadius:40,
+        paddingTop:25,
+        marginLeft:20,
+        marginRight:20
+        
+    },
+    searcFiteredContainer:{
+        marginLeft:10,
+        marginRight:10,
+        height:35,
+        paddingLeft:15,
+        paddingRight:10,
+        borderBottomWidth:1,
+        justifyContent:'center',
+        borderColor:'#d3d3d3'
+    },
+    notesInputConteiner:{
+        height:110,
+        marginTop:15,
+        marginLeft:15,
+        marginRight:15,
+        backgroundColor:'white',
+        borderRadius:9,
+        marginBottom:30
+    },
+    globalButtonContainer:{
+        flex:1,
+        flexDirection:'row',
+        alignItems:'center',
+    },
+    colorButtonContainer:{
+        flexDirection:'row',
+        marginLeft:10,
+        flex:1,
+        paddingRight:10
+    },
+    buttonContainer:{
+        flex:0.6,
+        height:35,
+        alignItems:'flex-end',
+        marginRight:10,
+    },
+    notesViewContainer:{
+        marginBottom:10,
+        justifyContent:'center',
+        marginLeft:15,
+        marginRight:15,
+        paddingLeft:10,
+        padding:8
+    },
+   
+})
